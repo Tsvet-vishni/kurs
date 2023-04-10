@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk-UA">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./style.css">
+
+  <script src="main.js" type="module"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header_text">Різниця в часі</div>
+  </header>
+
+  <main>
+    <form action="javascript:" id="form">
+      <div class="inputs">
+        <label class="first__label">
+          Початок
+          <input class="input start-date" type="date">
+        </label>
+        <label>
+          Кінець
+          <input class="input end-date" type="date" disabled>
+        </label>
+      </div>
+
+      <div class="options">
+        <div class="options__items">
+          <div class="options__presets">
+            <button type="button" class="options__preset" disabled>Вибрати Тиждень</button>
+            <button type="button" class="options__preset" disabled>Місяць</button>
+          </div>
+
+          <hr>
+
+          <div class="options__days">
+            <label class="options__day-choice">
+              <input type="radio" name="days" value="all" checked>
+              Всі дні
+            </label>
+            <label class="options__day-choice">
+              <input type="radio" name="days" value="workdays">
+              Будні дні
+            </label>
+            <label class="options__day-choice">
+              <input type="radio" name="days" value="weekend">
+              Вихідні дні
+            </label>
+          </div>
+
+          <hr>
+
+          <div class="options__buttons">
+            <button class="options__button" name="day" value="864e5" disabled>Порахувати Дні</button>
+            <button class="options__button" name="hour" value="36e5" disabled>Години</button>
+            <button class="options__button" name="minute" value="6e4" disabled>Хвилини</button>
+            <button class="options__button" name="second" value="1e3" disabled>Секунди</button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <div class="last-results__block">
+      <p class="last-results__link">Останні результати</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Початок</th>
+            <th>Кінець</th>
+            <th>Дні</th>
+            <th>Одиниці</th>
+            <th>Кількість</th>
+          </tr>
+        </thead>
+        <tbody id="results"></tbody>
+      </table>
+    </div>
+  </main>
+</body>
+
+</html>
